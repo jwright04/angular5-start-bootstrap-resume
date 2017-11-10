@@ -1,0 +1,21 @@
+<section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+    <div class="my-auto">
+        <h1 class="mb-0">{{personalInfo.firstName}}
+            <span class="text-primary">{{personalInfo.lastName}}</span>
+        </h1>
+        <div class="subheading mb-5">{{personalInfo.address.street}} · {{personalInfo.address.city}}, {{personalInfo.address.state}} {{personalInfo.address.zipCode}} · {{personalInfo.phoneNumber}} ·
+            <a href="mailto:{{personalInfo.email}}">{{personalInfo.email}}</a>
+        </div>
+        <p class="mb-5">{{personalInfo.description}}</p>
+        <ul class="list-inline list-social-icons mb-0">
+            <li class="list-inline-item" *ngFor="let social of socialData">
+                <a href="{{social.url}}">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="{{social.iconClassInfo}}"></i>
+                </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
